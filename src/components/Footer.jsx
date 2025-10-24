@@ -8,7 +8,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 function Footer() {
   return (
     <div> 
-      <div style={{ height: '300px' }} className="d-flex flex-column justify-content-center align-items-center bg-warning">
+      <div style={{ height: '300px',backgroundColor:'purple' }} className="d-flex flex-column justify-content-center align-items-center text-white">
         <h1>Contact Us</h1>
         <h5><MdAttachEmail />yourname@gamil.com</h5>
         <h5><FaSquarePhone />3423342345</h5>
@@ -18,7 +18,7 @@ function Footer() {
           <h5><FaInstagramSquare /></h5>
           <h5><FaFacebookSquare /></h5>
         </div>
-        <p></p>
+        <p>Designed and Build with react</p>
       </div>
       </div>
   )

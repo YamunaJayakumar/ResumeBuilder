@@ -22,7 +22,7 @@ function Header() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-           <img  width={'40px'}src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-resume-icon-png-image_4225024.jpg" alt="logo" />
+           <img  width={'40px'}src="\pngtree-vector-resume-icon-png-image_956526-removebg-preview.png" alt="logo" />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link to={'/'} className="text-light text-decoration-none fw-bolder">rBuilder</Link>
