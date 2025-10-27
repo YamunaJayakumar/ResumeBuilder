@@ -6,6 +6,8 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+import TextField from '@mui/material/TextField';
+
 const steps = ['Basic Informations', 'Contact Details', 'Educational Details','Work Experience','Skills & Certifications','Review & Submit'];
 
 function UserInput() {
@@ -54,6 +56,75 @@ function UserInput() {
     setActiveStep(0);
   };
 
+// create function for stpes 
+const renderSteps =(stepCount)=>{
+  switch(stepCount){
+    case 0:return(
+        <div>
+            <h3>Personal Details</h3>
+            <div className="row p-3">
+                <TextField id="standard-basic-name" label="Full Name" variant="standard" />
+                <TextField id="standard-basic-job" label="Job Title" variant="standard" />
+                <TextField id="standard-basic-location" label="Location" variant="standard" />
+            </div>
+            </div>
+    )
+  
+    case 1:return(
+        <div>
+            <h3>Contact Details</h3>
+            <div className="row mb-3">
+              <TextField id="standard-basic-email" label="Email" variant="standard" />
+              <TextField id="standard-basic-phonenumber" label="Phone Number" variant="standard" />
+              <TextField id="standard-basic-Github" label="Github Profile Link" variant="standard" />
+              <TextField id="standard-basic-Linkedin" label="Linkedin Profile Link" variant="standard" />
+              <TextField id="standard-basic-portfolio" label="Portfolio Link" variant="standard" />
+            </div>
+            
+                
+            </div>
+    )
+    case 2:return(
+        <div>
+            <h3>Educational Details</h3>
+            <div className="row p-3">
+                <TextField id="standard-basic-coursename" label="Course Name" variant="standard" />
+                <TextField id="standard-basic-collegename" label="College Name" variant="standard" />
+                
+                <TextField id="standard-basic-university" label="Unniversity" variant="standard" />
+                <TextField id="standard-basic-yearofpassout" label="Year Of Passout" variant="standard" />
+
+            </div>
+            </div>
+    )
+    case 3:return(
+        <div>
+            <h3>Professional Details</h3>
+               <div className="row p-3">
+                <TextField id="standard-basic-joborinternship" label="job or Internship" variant="standard" />
+                <TextField id="standard-basic-companyname" label="Company Name" variant="standard" />
+                
+                <TextField id="standard-basic-companylocation" label="Company Location" variant="standard" />
+                <TextField id="standard-basic-duration" label="Duration" variant="standard" />
+
+            </div>
+            </div>
+    )
+    case 4:return(
+        <div>
+            <h3>Skills</h3>
+            </div>
+    )
+    case 5:return(
+        <div>
+            <h3>Summary</h3>
+            </div>
+    )
+    default : return null
+  }
+}
+
+
   return (
     <Box sx={{ width: '100%' }}>
       <Stepper activeStep={activeStep}>
@@ -87,8 +158,18 @@ function UserInput() {
         </React.Fragment>
       ) : (
         <React.Fragment>
+            {/* typography-give text-content */}
           <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+
+
+          {/*  to render contents according to the steps ,div=box in material ui*/}
+          <Box > 
+            {renderSteps(activeStep)}      
+              </Box>
+
+
+
+          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>           
             <Button
               color="inherit"
               disabled={activeStep === 0}
