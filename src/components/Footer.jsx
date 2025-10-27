@@ -9,7 +9,7 @@ import { FaHeart } from "react-icons/fa";
 function Footer() {
   return (
     <div> 
-      <div style={{ height: '300px',backgroundColor:'purple' }} className="d-flex flex-column justify-content-center align-items-center text-white gap-1">
+      <div style={{ height: '300px',backgroundColor:'purple' }} className="d-flex flex-column justify-content-center align-items-center text-white gap-1 mt-5 p-5">
         <h1>Contact Us</h1>
         <h5><MdAttachEmail />yourname@gamil.com</h5>
         <h5><FaSquarePhone />3423342345</h5>
