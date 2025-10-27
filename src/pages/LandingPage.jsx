@@ -70,24 +70,66 @@ function LandingPage() {
           </div>
           <div className="col-md-6">
             <div className="container">
-              <div className="row">
+              <div className="row my-2">
                 <div className="col-3">
-                  <img width={'100%'} src="https://st2.depositphotos.com/2783505/11506/i/950/depositphotos_115061800-stock-photo-passport-photo-of-a-young.jpg" alt="" />
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
                 </div>
                 <div className="col-3">
-                  <img className='img-fluid' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXb5niujQAHWTEMdOtH62jTqUOdQePHMDOQ&s" alt="" />
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
                 </div>
                 <div className="col-3">
-                  <img width={'100%'} src="https://photogov-com.fra1.cdn.digitaloceanspaces.com/examples-new/original/DE.webp" alt="" />
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
                 </div>
                 <div className="col-3">
-                  <img width={'100%'} src="https://st2.depositphotos.com/2783505/11506/i/950/depositphotos_115061800-stock-photo-passport-photo-of-a-young.jpg" alt="" />
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
                 </div>
 
               </div>
-              <div className="row"></div>
-              <div className="row"></div>
-              <div className="row"></div>
+              <div className="row my-2">
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+
+              </div>
+              <div className="row my-2">
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+
+              </div>
+              <div className="row my-2">
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+
+                <div className="col-3">
+                  <img width={'100%'} src='https://img.freepik.com/free-photo/front-view-business-woman-suit_23-2148603018.jpg?semt=ais_hybrid&w=740&q=80' alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
