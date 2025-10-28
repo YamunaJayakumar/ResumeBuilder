@@ -11,9 +11,9 @@ function LandingPage() {
            <div className="container-fluid row align-items-center"style={{width:'100%',height:'100vh'}}>
               <div className="row">
                 <div className="col-md-4"></div>
-                <div className="col-md-4 shadow border py-5 rounded mt-5 text-center"style={{backgroundColor:'rgba(255,255,255,0.5)'}}>
+                <div className=" gap-1 col-md-4 shadow border py-5 rounded mt-5 text-center"style={{backgroundColor:'rgba(255,255,255,0.5)'}}>
                     <h3>Designed to get hired</h3>
-                    <h4>Your skill,your story your next job -all in one</h4>
+                    <h5>Your skill,your story your next job -all in one</h5>
                     <Link to={'/resume'} className='btn text-white' style={{backgroundColor:'purple'}}>make your Resume</Link>
                 </div>
                 <div className="col-md-4"></div>
@@ -60,9 +60,9 @@ function LandingPage() {
       {/* testimony*/}
       <section className='m-5'>
         <h2 className="text-center">Testimonials</h2>
-        <div className="container-fluid row">
-          <div className="col-md-6">
-            <h3>Trusted by professionals worldwide.</h3>
+        <div className="container-fluid row p-5">
+          <div className="col-md-6 d-flex flex-column justify-content-center align-items-left ">
+            <h3 className="pb-3">Trusted by professionals worldwide.</h3>
             <p className='fs-5 text-justify'>At LiveCareer, we don't just help you create résumés — we help you land the job. Whether you're a seasoned professional or just starting out, our tools are designed to get results.</p>
             <p className='fs-5 text-justify'>In fact, users who used LiveCareer reported getting hired an average of 48 days faster.</p>
             <p className='fs-5 text-justify'>Join thousands of job-seekers who’ve fast-tracked their careers with a résumé that truly stands out.</p>
