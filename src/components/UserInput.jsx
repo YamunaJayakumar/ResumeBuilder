@@ -15,6 +15,31 @@ function UserInput() {
  const skillSuggestionArray=['NODE JS','MONGODB','EXPRESS JS','REACT','JS','HTML','CSS','ANGULAR','JAVA','C','C++','PYTHON']
  const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
+//create state for storing resume details
+ const[resumeDetails,setResumeDetails]=React.useState({
+  username:"",
+  jobTitle:"",
+  location:"",
+  email:"",
+  mobile:"",
+  github:"",
+  linkedin:"",
+  portfolio:"",
+  course:"",
+  college:"",
+  university:"",
+  passoutYear:"",
+  jobType:"",
+  company:"",
+  cLocation:"",
+  duration:"",
+  userSkills:[],
+  summary:" "
+
+
+ })
+
+ console.log(resumeDetails);
 
   const isStepOptional = (step) => {
     return step === 1;
@@ -65,9 +90,9 @@ const renderSteps =(stepCount)=>{
         <div>
             <h3>Personal Details</h3>
             <div className="row p-3">
-                <TextField id="standard-basic-name" label="Full Name" variant="standard" />
-                <TextField id="standard-basic-job" label="Job Title" variant="standard" />
-                <TextField id="standard-basic-location" label="Location" variant="standard" />
+                <TextField value={resumeDetails.username} onChange={e=>setResumeDetails({...resumeDetails,username:e.target.value})}id="standard-basic-name" label="Full Name" variant="standard" />
+                <TextField value={resumeDetails.jobTitle}  onChange={e=>setResumeDetails({...resumeDetails,jobTitle:e.target.value})}id="standard-basic-job" label="Job Title" variant="standard" />
+                <TextField  value={resumeDetails.location} onChange={e=>setResumeDetails({...resumeDetails,location:e.target.value})} id="standard-basic-location" label="Location" variant="standard" />
             </div>
             </div>
     )
@@ -76,11 +101,11 @@ const renderSteps =(stepCount)=>{
         <div>
             <h3>Contact Details</h3>
             <div className="row p-3">
-              <TextField id="standard-basic-email" label="Email" variant="standard" />
-              <TextField id="standard-basic-phonenumber" label="Phone Number" variant="standard" />
-              <TextField id="standard-basic-Github" label="Github Profile Link" variant="standard" />
-              <TextField id="standard-basic-Linkedin" label="Linkedin Profile Link" variant="standard" />
-              <TextField id="standard-basic-portfolio" label="Portfolio Link" variant="standard" />
+              <TextField value={resumeDetails.email}   onChange={e=>setResumeDetails({...resumeDetails,email:e.target.value})}id="standard-basic-email" label="Email" variant="standard" />
+              <TextField value={resumeDetails.mobile}  onChange={e=>setResumeDetails({...resumeDetails,mobile:e.target.value})} id="standard-basic-phonenumber" label="Phone Number" variant="standard" />
+              <TextField value={resumeDetails.github}  onChange={e=>setResumeDetails({...resumeDetails,github:e.target.value})}id="standard-basic-Github" label="Github Profile Link" variant="standard" />
+              <TextField value={resumeDetails.linkedin} onChange={e=>setResumeDetails({...resumeDetails,linkedin:e.target.value})} id="standard-basic-Linkedin" label="Linkedin Profile Link" variant="standard" />
+              <TextField  value={resumeDetails.portfolio} onChange={e=>setResumeDetails({...resumeDetails,portfolio:e.target.value})} id="standard-basic-portfolio" label="Portfolio Link" variant="standard" />
             </div>
             
                 
@@ -90,11 +115,11 @@ const renderSteps =(stepCount)=>{
         <div>
             <h3>Educational Details</h3>
             <div className="row p-3">
-                <TextField id="standard-basic-coursename" label="Course Name" variant="standard" />
-                <TextField id="standard-basic-collegename" label="College Name" variant="standard" />
+                <TextField value={resumeDetails.course} onChange={e=>setResumeDetails({...resumeDetails,course:e.target.value})} id="standard-basic-coursename" label="Course Name" variant="standard" />
+                <TextField  value={resumeDetails.college} onChange={e=>setResumeDetails({...resumeDetails,college:e.target.value})}id="standard-basic-collegename" label="College Name" variant="standard" />
                 
-                <TextField id="standard-basic-university" label="Unniversity" variant="standard" />
-                <TextField id="standard-basic-yearofpassout" label="Year Of Passout" variant="standard" />
+                <TextField  value={resumeDetails.university}  onChange={e=>setResumeDetails({...resumeDetails,university:e.target.value})}id="standard-basic-university" label="Unniversity" variant="standard" />
+                <TextField  value={resumeDetails.passoutYear} onChange={e=>setResumeDetails({...resumeDetails,passoutYear:e.target.value})} id="standard-basic-yearofpassout" label="Year Of Passout" variant="standard" />
 
             </div>
             </div>
@@ -103,10 +128,10 @@ const renderSteps =(stepCount)=>{
         <div>
             <h3>Professional Details</h3>
                <div className="row p-3">
-                <TextField id="standard-basic-joborinternship" label="job or Internship" variant="standard" />
-                <TextField id="standard-basic-companyname" label="Company Name" variant="standard" />
-                <TextField id="standard-basic-companylocation" label="Company Location" variant="standard" />
-                <TextField id="standard-basic-duration" label="Duration" variant="standard" />
+                <TextField value={resumeDetails.jobType}  onChange={e=>setResumeDetails({...resumeDetails,jobType:e.target.value})} id="standard-basic-joborinternship" label="job or Internship" variant="standard" />
+                <TextField  value={resumeDetails.company} onChange={e=>setResumeDetails({...resumeDetails,company:e.target.value})}id="standard-basic-companyname" label="Company Name" variant="standard" />
+                <TextField  value={resumeDetails.cLocation} onChange={e=>setResumeDetails({...resumeDetails,cLocation:e.target.value})} id="standard-basic-companylocation" label="Company Location" variant="standard" />
+                <TextField  value={resumeDetails.duration} onChange={e=>setResumeDetails({...resumeDetails,duration:e.target.value})} id="standard-basic-duration" label="Duration" variant="standard" />
 
             </div>
             </div>
@@ -138,7 +163,7 @@ const renderSteps =(stepCount)=>{
         <div>
             <h3>Summary</h3>
             <div className="p-3 row">
-                 <TextField id="standard-summary" label="write a short summary of yourself" variant="standard" multiline rows={7}
+                 <TextField onChange={e=>setResumeDetails({...resumeDetails,summary:e.target.value})} id="standard-summary" label="write a short summary of yourself" variant="standard" multiline rows={7}
                  defaultValue={'Enthusiastic and detail-oriented MERN Stack Developer with a strong foundation in building responsive and dynamic web applications using MongoDB, Express.js, React.js, and Node.js. Passionate about leveraging modern technologies to solve real-world problems and deliver efficient, maintainable solutions. Skilled in developing full-stack applications from concept to deployment and eager to contribute to a collaborative, growth-oriented development team.'}/>
             </div>
             </div>
