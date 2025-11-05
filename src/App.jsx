@@ -19,7 +19,7 @@ function App() {
         <Route path='/userform' element={<UserForm/>}/>
         <Route path='/history' element={<History/>}/>
         {/* dynamic url-prefix with colon (:) 7dymamic value will be stored in variable after colon in 'id'eg=':id' */}
-        <Route path='/resume/id/view' element={<ViewResume/>}/>
+        <Route path='/resume/:id/view' element={<ViewResume/>}/>
         <Route path='/*' element={<Pnf/>}/>
      </Routes>
      <Footer/>

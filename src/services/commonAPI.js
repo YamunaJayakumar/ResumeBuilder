@@ -2,13 +2,13 @@
 import axios from "axios"
 
 const commonAPI=async (url,httpMethod,reqBody)=>{
-    const reqestConfig ={
+    const requestConfig ={
         url,
-        Method:httpMethod,
+        method:httpMethod,
         data:reqBody
 
     }
     //API CALL
-    return await axios(reqestConfig).then(res=>res).catch(err=>err)
+    return await axios(requestConfig).then(res=>res).catch(err=>err)
 }
 export default commonAPI

@@ -7,6 +7,9 @@ import ServerURL from "./ServerURL"
 export const addResumeAPI=async(resume)=>{
     return  await commonAPI(`${ServerURL}/resumes`,"POST",resume)
 }
-//2.get resume api
+//2.get resume api-called from viewresume,when page load(),inside useeffect() hook
+export const getResumeAPI = async(id) => {
+    return  await commonAPI(`${ServerURL}/resumes/${id}`,"GET",{})
+}
 //3.update resume api
 //4.
