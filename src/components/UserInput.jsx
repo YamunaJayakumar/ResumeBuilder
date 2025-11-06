@@ -66,7 +66,7 @@ function Userinput({ resumeDetails, setResumeDetails }) {
   const handleReset = () => {
     setActiveStep(0);
   };
-  //tos add skill that inputed in the text field
+  //to add skill that inputed in the text field
   const addskill = (skill) => {
     if (resumeDetails.userSkills.includes(skill)) {
       alert("The given skill already added,Please add another one!!!")

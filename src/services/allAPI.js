@@ -12,4 +12,7 @@ export const getResumeAPI = async(id) => {
     return  await commonAPI(`${ServerURL}/resumes/${id}`,"GET",{})
 }
 //3.update resume api
+export const updateResumeAPI = async(id,resume) => {
+    return  await commonAPI(`${ServerURL}/resumes/${id}`,"PUT",resume)
+}
 //4.
