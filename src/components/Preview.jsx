@@ -7,13 +7,13 @@ function Preview({resumeDetails}) {
       <h3>{resumeDetails?.username}</h3>
       <h4>{resumeDetails?.jobTitle}</h4>
       <h6><span className='mx-2'>{resumeDetails?.location}</span>|<span className='mx-2'>{resumeDetails?.email}</span>|<span className='mx-2'>{resumeDetails?.mobile}</span></h6>
-      <p className='my-2'>
+      <p className='my-3'>
         <a href={resumeDetails?.github} target='_blank' className='mx-1'>GITHUB</a> |
         <a href={resumeDetails?.linkedin} target='_blank' className='mx-1'>LINKEDIN</a> |
         <a href={resumeDetails?.portfolio} target='_blank' className='mx-1'>PORTFOLIO</a>
       </p>
       <Divider sx={{ fontSize: '20px', fontWeight: '600' }}>Summary</Divider>
-      <p style={{ textAlign: 'justify' }}>
+      <p  className='px-4'style={{ textAlign: 'justify', }}>
         {resumeDetails?.summary}
       </p>
       <Divider sx={{ fontSize: '20px', fontWeight: '600' }}>Education</Divider>

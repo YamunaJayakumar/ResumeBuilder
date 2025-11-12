@@ -15,4 +15,15 @@ export const getResumeAPI = async(id) => {
 export const updateResumeAPI = async(id,resume) => {
     return  await commonAPI(`${ServerURL}/resumes/${id}`,"PUT",resume)
 }
-//4.
+//4.add history
+export const addHistoryAPI = async(history) => {
+    return  await commonAPI(`${ServerURL}/history`,"POST",history)
+}
+//5.getHistoryAPI-called from istory componennt,when page load(),inside useeffect hook
+export const getHistoryAPI=async()=>{
+    return await commonAPI(`${ServerURL}/history`,"GET",{})
+}
+//6.remove histroy api
+export const removeHistoryAPI= async(id)=>{
+    return await commonAPI(`${ServerURL}/history/${id}`,"DELETE",{})
+}

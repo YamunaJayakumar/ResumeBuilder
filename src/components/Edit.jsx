@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { TextField } from '@mui/material';
 import { IoMdClose } from "react-icons/io";
+import { updateResumeAPI } from '../services/allAPI';
+
 
 const style = {
     position: 'absolute',
@@ -42,6 +44,29 @@ function Edit({ resumeDetails, setResumeDetails }) {
     const removeSkills = (skill) => {
         setResumeDetails({ ...resumeDetails, userSkills: resumeDetails.userSkills.filter(item => item != skill) })
     }
+    
+    const handleResumeUpdate=async()=>{
+        const {id,username,jobTitle,location}=resumeDetails
+        if(!username && !jobTitle&& !location){
+            alert("please fill the form completely")
+        }
+        else{
+            console.log('api call')
+            try{
+                const result=await updateResumeAPI(id,resumeDetails)
+                console.log(result)
+                if(result.status==200){
+                    alert("resume updated successfully")
+                    handleClose()
+                }
+
+            }catch(err){
+                console.log(err)
+            }
+        }
+
+    }
+    
 
     return (
         <div>
@@ -121,7 +146,7 @@ function Edit({ resumeDetails, setResumeDetails }) {
                             </div>
                         </div>
                         <div className="my-3">
-                            <button className="btn btn-warning">update</button>
+                            <button className="btn btn-warning"onClick={handleResumeUpdate}>update</button>
                         </div>
                     </Box>
                 </Box>
